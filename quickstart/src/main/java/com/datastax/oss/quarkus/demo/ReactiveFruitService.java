@@ -17,8 +17,8 @@ package com.datastax.oss.quarkus.demo;
 
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 /**
  * A service that manages {@link Fruit} objects using reactive-style programming. This service
