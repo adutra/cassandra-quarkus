@@ -59,10 +59,12 @@ public class FailedMutinyReactiveResultSet extends AbstractMulti<ReactiveRow>
     return new DefaultMultiPublisher<>(inner.onItem().castTo(Boolean.class));
   }
 
+  @Override
   public void subscribe(Flow.Subscriber<? super ReactiveRow> subscriber) {
     inner.subscribe(Infrastructure.onMultiSubscription(inner, subscriber));
   }
 
+  @Override
   public void subscribe(Subscriber<? super ReactiveRow> subscriber) {
     subscribe(AdaptersToFlow.subscriber(subscriber));
   }

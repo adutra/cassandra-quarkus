@@ -75,6 +75,7 @@ public class DefaultMutinyReactiveResultSet extends AbstractMulti<ReactiveRow>
     inner.subscribe(Infrastructure.onMultiSubscription(inner, subscriber));
   }
 
+  @Override
   public void subscribe(Subscriber<? super ReactiveRow> subscriber) {
     subscribe(AdaptersToFlow.subscriber(subscriber));
   }

@@ -72,6 +72,7 @@ public class DefaultMutinyMappedReactiveResultSet<EntityT> extends AbstractMulti
     multi.subscribe(Infrastructure.onMultiSubscription(multi, subscriber));
   }
 
+  @Override
   public void subscribe(Subscriber<? super EntityT> subscriber) {
     subscribe(AdaptersToFlow.subscriber(subscriber));
   }

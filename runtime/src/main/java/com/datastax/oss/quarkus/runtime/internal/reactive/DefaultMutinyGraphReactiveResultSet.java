@@ -48,10 +48,12 @@ public class DefaultMutinyGraphReactiveResultSet extends AbstractMulti<ReactiveG
     return executionInfos;
   }
 
+  @Override
   public void subscribe(MultiSubscriber<? super ReactiveGraphNode> subscriber) {
     multi.subscribe(Infrastructure.onMultiSubscription(multi, subscriber));
   }
 
+  @Override
   public void subscribe(Subscriber<? super ReactiveGraphNode> subscriber) {
     subscribe(AdaptersToFlow.subscriber(subscriber));
   }

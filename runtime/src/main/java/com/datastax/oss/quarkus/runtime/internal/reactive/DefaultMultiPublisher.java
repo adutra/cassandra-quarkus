@@ -30,6 +30,7 @@ public class DefaultMultiPublisher<T> extends AbstractMulti<T> implements MultiP
     this.inner = inner;
   }
 
+  @Override
   public void subscribe(MultiSubscriber<? super T> subscriber) {
     inner.subscribe(Infrastructure.onMultiSubscription(inner, subscriber));
   }

@@ -59,10 +59,12 @@ public class FailedMutinyMappedReactiveResultSet<T> extends AbstractMulti<T>
     return new DefaultMultiPublisher<>(inner.onItem().castTo(Boolean.class));
   }
 
+  @Override
   public void subscribe(MultiSubscriber<? super T> subscriber) {
     inner.subscribe(Infrastructure.onMultiSubscription(inner, subscriber));
   }
 
+  @Override
   public void subscribe(Subscriber<? super T> subscriber) {
     subscribe(AdaptersToFlow.subscriber(subscriber));
   }
