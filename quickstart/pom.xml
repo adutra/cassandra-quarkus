@@ -63,15 +63,15 @@
       <artifactId>cassandra-quarkus-client</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.datastax.oss</groupId>
+      <groupId>org.apache.cassandra</groupId>
       <artifactId>java-driver-core</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.datastax.oss</groupId>
+      <groupId>org.apache.cassandra</groupId>
       <artifactId>java-driver-mapper-runtime</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.datastax.oss</groupId>
+      <groupId>org.apache.cassandra</groupId>
       <artifactId>java-driver-metrics-micrometer</artifactId>
     </dependency>
     <dependency>
@@ -322,4 +322,14 @@
       <organization>DataStax</organization>
     </developer>
   </developers>
+  <repositories>
+    <repository>
+      <id>apache-cassandra-driver</id>
+      <name>Apache Cassandra Driver</name>
+      <url>https://repository.apache.org/content/repositories/orgapachecassandra-1322</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>

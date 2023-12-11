@@ -30,7 +30,7 @@
     <dependencies>
       <!-- DataStax Java Driver BOM -->
       <dependency>
-        <groupId>com.datastax.oss</groupId>
+        <groupId>org.apache.cassandra</groupId>
         <artifactId>java-driver-bom</artifactId>
         <version>${datastax-java-driver.version}</version>
         <type>pom</type>
@@ -41,7 +41,7 @@
       in order for the exclusions to be taken into account
       -->
       <dependency>
-        <groupId>com.datastax.oss</groupId>
+        <groupId>org.apache.cassandra</groupId>
         <artifactId>java-driver-core</artifactId>
         <version>${datastax-java-driver.version}</version>
         <exclusions>
